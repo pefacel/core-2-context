@@ -19,7 +19,7 @@ export default function Form({ setOpen }) {
     e.preventDefault();
 
     let person = {
-      id: 6846488,
+      id: people.length + 1,
       name,
       title,
       email,
