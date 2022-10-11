@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import GlobalContextProvider from "../contexts/GlobalContext";
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }) {
+  return (
+    <>
+      <div className="h-screen">
+        <GlobalContextProvider>
+          <Component {...pageProps} />
+        </GlobalContextProvider>
+      </div>
+    </>
+  );
 }
 
-export default MyApp
+export default App;
